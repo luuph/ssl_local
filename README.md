@@ -35,9 +35,9 @@
    - Replace the placeholders with the paths to the `rootCA.key` and `rootCA.pem` files you generated earlier.
 
 2. **Generate SSL for Your Local Site:**
-   - Run the following command, replacing `<path-to-site>` and `<domain>` with your project's path and domain:
+   - Run the following command, replacing `<path-to-site>` and `<domain1>` `<domain2>` with your project's path and domains:
      ```bash
-     php generate_ssl.php <path-to-site> <domain>
+     php generate_ssl.php <path-to-site> <domain1> <domain2>
      ```
    - You may be prompted to enter the passphrase for the `rootCA.pem` key during this process.
 
@@ -50,6 +50,13 @@
    systemctl restart nginx
    ```
 
+---
+### Update domain SSL
+- Run the following command, replacing `<path-to-site>` and `<domain update>` with your project's path and domain:
+     ```bash
+     php generate_ssl.php update <path-to-site> <domain update>
+     ```
+- You may be prompted to enter the passphrase for the `rootCA.pem` key during this process.
 ---
 
 ### Troubleshooting
